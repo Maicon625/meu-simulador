@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Bolsa de Valores</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Simulador de Bolsa de Valores</h1>
+        <div id="portfolio">
+            <h2>Meu Portfólio</h2>
+            <p>Saldo: <span id="balance">10000</span></p>
+            <p>Minhas ações:</p>
+            <ul id="holdings"></ul>
+        </div>
+        <div id="trade">
+            <h2>Operações</h2>
+            <input type="text" id="ticker" placeholder="Código da Ação">
+            <input type="number" id="amount" placeholder="Quantidade">
+            <button onclick="buyStock()">Comprar</button>
+            <button onclick="sellStock()">Vender</button>
+        </div>
+        <div id="price-info">
+            <h2>Informações da Ação</h2>
+            <p>Cotação Atual: <span id="current-price">-</span></p>
+        </div>
+        <div id="popular-tickers">
+            <h2>Tickers Populares</h2>
+            <select id="ticker-select" onchange="selectTicker()">
+                <option value="">Selecione um Ticker</option>
+                <option value="AAPL">Apple (AAPL)</option>
+                <option value="MSFT">Microsoft (MSFT)</option>
+                <option value="AMZN">Amazon (AMZN)</option>
+                <option value="GOOGL">Google (GOOGL)</option>
+                <option value="META">Facebook (META)</option>
+                <option value="TSLA">Tesla (TSLA)</option>
+                <option value="PBR">Petrobras (PBR)</option>
+                <option value="VALE">Vale (VALE)</option>
+                <option value="ITUB">Itaú Unibanco (ITUB)</option>
+                <option value="ABEV">Ambev (ABEV)</option>
+            </select>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

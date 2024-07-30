@@ -1,0 +1,85 @@
+/* Redefinindo algumas propriedades básicas para ocupar toda a tela */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Configuração do contêiner principal */
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #671ae4;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Estilo do título */
+h1, h2 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Configuração do portfólio e operações */
+#portfolio, #trade, #price-info, #popular-tickers {
+    width: 100%;
+    max-width: 600px;
+    background: rgb(165, 146, 218);
+    padding: 5px;
+    margin: 1px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Estilo do campo de entrada e botões */
+input, button, select {
+    width: calc(100% - 24px);
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #e3e9ee;
+}
+
+button {
+    width: calc(50% - 12px);
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:last-of-type {
+    background-color: #dc3545;
+}
+
+/* Estilo do saldo e lista de ativos */
+#balance {
+    font-weight: bold;
+}
+
+#holdings {
+    list-style: none;
+    padding: 0;
+}
+
+#holdings li {
+    padding: 5px 0;
+}
+
+/* Estilo para tornar a página responsiva */
+@media (max-width: 600px) {
+    input, button, select {
+        width: calc(100% - 22px); /* Ajuste para telas menores */
+    }
+    button {
+        width: calc(100% - 10px);
+    }
+}
