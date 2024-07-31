@@ -1,14 +1,4 @@
-async function getStockPrice(ticker) {
-    try {
-        const response = await fetch(`/.netlify/functions/stock?ticker=${ticker}`);
-        const data = await response.json();
-        console.log('Preço da ação:', data);
-        return data.c;
-    } catch (error) {
-        console.error('Error fetching stock price:', error);
-        return null;
-    }
-}
+
 
 let balance = 10000;
 let holdings = {};
